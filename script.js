@@ -19,33 +19,6 @@
 
   
 
-  // const text = "Now Loading...";
-  // const target = document.getElementById("loading-text");
-  // let i = 0;
-
-  // function showLetters() {
-  //   if (i <= text.length) {
-  //     target.textContent = text.substring(0, i);
-  //     i++;
-  //     setTimeout(showLetters, 200); 
-  //   } else {
-  //     i = 0;
-  //     setTimeout(showLetters, 400); 
-  //   }
-  // }
-
-  // showLetters();
-
- 
-  // window.addEventListener("load", () => {
-  //   setTimeout(() => {
-  //   document.getElementById("loading-screen").style.opacity= "0";
-  // }, 3000); //
-  //   setTimeout(() => {
-  //     document.getElementById("loading-screen").style.display = "none";
-  //   }, 3300); // 
-  // });
-
 
 
  
@@ -136,28 +109,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".works_top_inner");
-    const web = document.querySelector(".web");
-    const graphic = document.querySelector(".graphic");
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   const buttons = document.querySelectorAll(".works_top_inner");
+  //   const web = document.querySelector(".web");
+  //   const graphic = document.querySelector(".graphic");
 
-    buttons.forEach((button) => {
-      button.addEventListener("click", function () {
-        const target = this.getAttribute("data-filter");
+  //   buttons.forEach((button) => {
+  //     button.addEventListener("click", function () {
+  //       const target = this.getAttribute("data-filter");
 
-        if (target === "web") {
-          web.style.display = "block";
-          graphic.style.display = "none";
-        } else if (target === "graphic") {
-          web.style.display = "none";
-          graphic.style.display = "block";
-        } else {
-          web.style.display = "block";
-          graphic.style.display = "block";
-        }
-      });
-    });
-  });
+  //       if (target === "web") {
+  //         web.style.display = "block";
+  //         graphic.style.display = "none";
+  //       } else if (target === "graphic") {
+  //         web.style.display = "none";
+  //         graphic.style.display = "block";
+  //       } else {
+  //         web.style.display = "block";
+  //         graphic.style.display = "block";
+  //       }
+  //     });
+  //   });
+  // });
 
 
 // src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"

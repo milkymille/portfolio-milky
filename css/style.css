@@ -75,19 +75,6 @@ body.fade-out {
 
 
 /* 全画面にローディング画面 */
-#loading-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #fff;
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.3s;
-}
 
 
 
@@ -135,19 +122,20 @@ body.fade-out {
     align-items: center;
     padding-left: 2.77%;
     padding-right: 6.94%;
-    /* position: absolute; */
-    padding-top: 10px;
+    position: absolute;
     left: 0;
     width: 100%;
     box-sizing: border-box;
     z-index: 100;
-    position: fixed;
+
 }
 
 .logo {
   top:40px;
   left:40px;
   max-width: 80px;
+  position: fixed !important;
+  z-index: 1000;
 }
 
 
@@ -155,6 +143,10 @@ body.fade-out {
     display: flex;
     gap: 50px;                
     justify-content: center;
+    position: fixed;
+    z-index: 1000;
+    margin-right: 150px;
+    margin-top: 10px;
   }
   
   .pc-nav li {
@@ -179,6 +171,7 @@ body.fade-out {
     display: flex;
     gap: 50px;
     justify-content: center;
+
   }
 
 
@@ -312,7 +305,6 @@ picture {
     flex-direction: column;
     margin-left: -80px;
     margin-top: -229px; 
-    overflow: hidden;
 }
 
 .about_img3{
@@ -718,6 +710,7 @@ picture {
   .logo_blue {
     top:40px;
     left:40px;
+    position: fixed;
 }
 
   
@@ -1827,7 +1820,7 @@ button {
   position: absolute;
   top:40%;
   transform:translateY(-50%);
-  right:-30px;
+  right:-25px;
   
 }
 
@@ -2258,7 +2251,10 @@ button {
     align-items: center;
     position: relative;
     cursor: pointer;
-    z-index: 9999; /* ← 手前に出すため */
+    z-index: 9999; 
+    top:10px
+
+    
   }
   
   .hamburger span {
@@ -2301,8 +2297,7 @@ button {
   }
 
 /* ハンバーガーアイコン */
-.hamburger-button {
-  position: fixed;
+/* .hamburger-button {
   top: 20px;
   right: 20px;
   z-index: 1101;
@@ -2310,13 +2305,16 @@ button {
   border: none;
   font-size: 28px;
   color: #000;
-}
+  position: fixed !important;
+} */
+
 
 
 .sp-nav_ham{
   display: flex;
   align-items: center;
   height: 100%;
+  position: fixed !important;
 }
 
 /* オーバーレイ背景 */
@@ -2368,8 +2366,13 @@ button {
   transform-origin: left bottom;
   transition: 0.5s;
   transform: rotate(90deg);
-  display: block;
+}
 
+.sp-nav {
+  display: none;
+}
+.sp-nav.active {
+  display: block;
 }
 
 .sp-nav ul{
@@ -2423,6 +2426,7 @@ button {
   .logo_blue {
     margin-top: 20px;
     margin-left: 20px;
+    position: fixed;
   } 
   
   .logo_blue {
@@ -2523,6 +2527,7 @@ button {
       position: absolute;
       right:0;
       top:0;
+      overflow: hidden;
       
   }
   
@@ -3509,8 +3514,8 @@ margin-top: 81px;
   }
   
   .scroll_down{
-    max-width: 18px;
-    top:30%;
+    max-width: 15px;
+    top:20%;
     transform:translateY(-50%);
     right:-30px
   }
