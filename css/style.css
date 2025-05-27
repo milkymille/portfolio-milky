@@ -134,7 +134,7 @@ body.fade-out {
   top:40px;
   left:40px;
   max-width: 80px;
-  position: fixed !important;
+  position: fixed;
   z-index: 1000;
 }
 
@@ -1779,7 +1779,7 @@ button {
 }
 
 .meishi_slide {
-  display: flex ;
+  display: flex !important;
   justify-content: center;
   align-items: center;
 }
@@ -2258,10 +2258,12 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: fixed;
     cursor: pointer;
     z-index: 9999; 
-    top:20px
+    top:20px;
+    right: 30px;
+    
   }
   
   .hamburger span {
@@ -2354,7 +2356,7 @@ button {
 
   
 .sp-nav{
-  position:absolute;
+  position:fixed;
   top:0;
   left:0;
   height:100vh;
@@ -2363,14 +2365,11 @@ button {
   transform-origin: left bottom;
   transition: 0.5s;
   transform: rotate(90deg);
+  display: block;
+  opacity: 0;
 }
 
-.sp-nav {
-  display: none;
-}
-.sp-nav.active {
-  display: block;
-}
+
 
 .sp-nav ul{
   height: 100%;
@@ -2392,6 +2391,7 @@ button {
 
 .sp-nav.active {
  transform: rotate(0);
+ opacity: 1;
 }
 
 
@@ -2418,11 +2418,13 @@ button {
 
   .logo{
       max-width:50px;
+      top:20px;
+      left:20px;
   }
 
   .logo_blue {
-    margin-top: 20px;
-    margin-left: 20px;
+    top: 20px;
+    left: 20px;
     position: fixed;
   } 
   
