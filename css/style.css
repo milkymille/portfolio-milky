@@ -2356,7 +2356,7 @@ button {
 
   
 .sp-nav{
-  position:fixed;
+  position:absolute;
   top:0;
   left:0;
   height:100vh;
@@ -2425,7 +2425,6 @@ button {
   .logo_blue {
     top: 20px;
     left: 20px;
-    position: fixed;
   } 
   
   .logo_blue {
