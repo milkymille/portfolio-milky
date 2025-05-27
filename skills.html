@@ -13,7 +13,10 @@
             <div class="header-wrap">
                 <a href="index.html">
                     <h1 class="logo_blue">
-                        <img src="Photo/logo_blue.png" alt="mill_logo" /></h1
+                        <img
+                            src="Photo/logo_blue.png"
+                            alt="Mill Designのロゴ"
+                        /></h1
                 ></a>
                 <nav class="pc-nav">
                     <ul>
@@ -62,8 +65,11 @@
                         ターゲットに響くデザインを意識し、視認性とインパクトのあるグラフィックを提供し、伝えたいメッセージを視覚的に魅力的に表現します。
                     </p>
                 </div>
+                <div class="skills_viewmore">
+                    <img src="Photo/SKillsviewmore@2x.png" alt="viewmore" />
+                </div>
                 <div class="yazirushi_graphic accordion">
-                    <img src="Photo/yaziruchi@2x.png" alt="yazirushi" />
+                    <img src="Photo/yaziruchi@2x.png" alt="下向き矢印" />
                 </div>
                 <div class="skills01 skills_infowrap">
                     <div class="skills1">
@@ -105,8 +111,11 @@
                 <p class="skills_sentence">
                     ユーザー第一に考え、使いやすく操作に迷うことないシンプルで分かりやすいデザインを心がけ、視線の流れや配色、余白の些細なところまで丁寧に作り込むようにしています。
                 </p>
+                <div class="skills_viewmore">
+                    <img src="Photo/SKillsviewmore@2x.png" alt="viewmore" />
+                </div>
                 <div class="yazirushi_web accordion" data-target="skills">
-                    <img src="Photo/yaziruchi@2x.png" alt="yazirushi" />
+                    <img src="Photo/yaziruchi@2x.png" alt="下向き矢印" />
                 </div>
                 <div class="skills02 skills_infowrap">
                     <div class="skills1">
@@ -160,8 +169,11 @@
                 <p class="skills_sentence">
                     デザインカンプを忠実に再現することができます。誰が見ても分かりやすいコーディングを目指してます。
                 </p>
+                <div class="skills_viewmore">
+                    <img src="Photo/SKillsviewmore@2x.png" alt="viewmore" />
+                </div>
                 <div class="yazirushi_coding accordion" data-target="skills">
-                    <img src="Photo/yaziruchi@2x.png" alt="yazirushi" />
+                    <img src="Photo/yaziruchi@2x.png" alt="下向き矢印" />
                 </div>
 
                 <div class="skills03 skills_infowrap">
@@ -209,14 +221,14 @@
 
                 <div class="footer-right">
                     <div class="finduson">
-                        <img src="Photo/FINDUSON@2x.png" alt="about_photo1" />
+                        <img src="Photo/FINDUSON@2x.png" alt="finduson" />
                     </div>
                     <a
                         href="https://www.instagram.com/mi.ll_design?igsh=MWFrcW43bm9heGhxdw&utm_source=qr"
                     >
                         <img
                             src="Photo/instagram@2x.png"
-                            alt="Instagram"
+                            alt="Instagramアイコン"
                             class="instaicon"
                         />
                     </a>
@@ -239,14 +251,14 @@
 
                 <div class="footer-right_nav-sp">
                     <div class="finduson">
-                        <img src="Photo/FINDUSON@2x.png" alt="about_photo1" />
+                        <img src="Photo/FINDUSON@2x.png" alt="finduson" />
                     </div>
                     <a
                         href="https://www.instagram.com/mi.ll_design?igsh=MWFrcW43bm9heGhxdw&utm_source=qr"
                     >
                         <img
                             src="Photo/instagram@2x.png"
-                            alt="Instagram"
+                            alt="Instagramアイコン"
                             class="instaicon"
                         />
                     </a>
@@ -336,21 +348,37 @@
                 $(".accordion").click(function () {
                     const $this = $(this);
                     const $img = $this.find("img");
-                    const isActive = $this.hasClass("active");
 
-                    $(".accordion").removeClass("active");
+                    // 矢印
                     if ($img.attr("src") == "Photo/yaziruchi@2x.png") {
                         $img.attr("src", "Photo/yazueysgu_up@2x.png");
                     } else {
                         $img.attr("src", "Photo/yaziruchi@2x.png");
                     }
 
+                    // graphic
                     if ($this.hasClass("yazirushi_graphic")) {
                         $(".skills01").slideToggle();
-                    } else if ($this.hasClass("yazirushi_web")) {
+                        $(".yazirushi_graphic")
+                            .closest(".skills_list")
+                            .find(".skills_viewmore")
+                            .toggle();
+                    }
+                    // web
+                    else if ($this.hasClass("yazirushi_web")) {
                         $(".skills02").slideToggle();
-                    } else if ($this.hasClass("yazirushi_coding")) {
+                        $(".yazirushi_web")
+                            .closest(".skills_list")
+                            .find(".skills_viewmore")
+                            .toggle();
+                    }
+                    // coding
+                    else if ($this.hasClass("yazirushi_coding")) {
                         $(".skills03").slideToggle();
+                        $(".yazirushi_coding")
+                            .closest(".skills_list")
+                            .find(".skills_viewmore")
+                            .toggle();
                     }
                 });
             });

@@ -1082,14 +1082,7 @@ picture {
     z-index: 1000;
 }
 
-@keyframes bounceDown {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(5px);
-    }
-}
+
 
 .yazirushi_graphic img:hover 
 .yazirushi_web img:hover,
@@ -1097,6 +1090,15 @@ picture {
   opacity: 0.7;
   transition: opacity 0.3s ease;
 }
+
+
+.skills_viewmore{
+  width: 92px;
+  margin: 0 auto;
+}
+
+
+
 
   .skills1{
     margin-bottom: 15px;
@@ -1782,6 +1784,8 @@ button {
   align-items: center;
 }
 
+
+
 .meishi_slide_sp{
   display: none;
 }
@@ -1833,7 +1837,7 @@ button {
   position: absolute;
   top:40%;
   transform:translateY(-50%);
-  right:-30px
+  right:-25px
 }
 
 
@@ -2241,6 +2245,11 @@ button {
       display: none;
   }
 
+.hamburger_wrap{
+  position: fixed;
+  z-index: 9000;
+}
+
   .hamburger {
     width: 50px;
     height: 50px;
@@ -2252,9 +2261,7 @@ button {
     position: relative;
     cursor: pointer;
     z-index: 9999; 
-    top:10px
-
-    
+    top:20px
   }
   
   .hamburger span {
@@ -2296,17 +2303,7 @@ button {
     top: 24px;
   }
 
-/* ハンバーガーアイコン */
-/* .hamburger-button {
-  top: 20px;
-  right: 20px;
-  z-index: 1101;
-  background: none;
-  border: none;
-  font-size: 28px;
-  color: #000;
-  position: fixed !important;
-} */
+
 
 
 
@@ -3520,6 +3517,13 @@ margin-top: 81px;
     right:-30px
   }
   
+
+  .scroll_down_sp{
+    max-width: 15px;
+    top:30%;
+    transform:translateY(-50%);
+    right:-25px
+  }
   
   .works_contents_wrap{
    display: none;

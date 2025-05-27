@@ -19,7 +19,10 @@
             <div class="header-wrap">
                 <a href="index.html">
                     <h1 class="logo_blue">
-                        <img src="Photo/logo_blue.png" alt="mill_logo" /></h1
+                        <img
+                            src="Photo/logo_blue.png"
+                            alt="Mill Designのロゴ"
+                        /></h1
                 ></a>
                 <nav class="pc-nav">
                     <ul>
@@ -70,13 +73,13 @@
                                 <div class="meishi_yoko_ciel">
                                     <img
                                         src="Photo/ciel_shop_omote@2x.png"
-                                        alt="名刺 表"
+                                        alt="ベーカリーショップショップカード"
                                     />
                                 </div>
                                 <div class="meishi_yoko_ciel">
                                     <img
                                         src="Photo/ciel_shop_ura@2x.png"
-                                        alt="名刺 裏"
+                                        alt="ベーカリーショップショップカード"
                                     />
                                 </div>
                             </div>
@@ -86,13 +89,16 @@
                     <!-- スライド2：ロゴ説明 -->
                     <div class="meishi_slide">
                         <div class="logo_meaning">
-                            <img src="Photo/ciellogo@2x.png" alt="logo" />
+                            <img
+                                src="Photo/ciellogo@2x.png"
+                                alt="ベーカリーショップロゴ"
+                            />
                         </div>
                         <div class="meishi_slide_sp">
                             <div class="logo_meaning_sp">
                                 <img
                                     src="Photo/ciel_logo_mean.png"
-                                    alt="logo"
+                                    alt="ベーカリーショップショップロゴ"
                                 />
                             </div>
                         </div>
@@ -100,10 +106,10 @@
                 </div>
                 <!-- 矢印 -->
                 <div class="meishi-prev">
-                    <img src="Photo/yazirushi3@2x.png" alt="prev arrow" />
+                    <img src="Photo/yazirushi3@2x.png" alt="戻るボタン" />
                 </div>
                 <div class="meishi-next">
-                    <img src="Photo/yazirushi4@2x.png" alt="next arrow" />
+                    <img src="Photo/yazirushi4@2x.png" alt="次へボタン" />
                 </div>
             </div>
 
@@ -188,12 +194,12 @@
             <div class="backtoall_wrap">
                 <a href="works.html" class="scroll_area">
                     <div class="backtoall">
-                        <img src="Photo/backtoall@2x.png" alt="view more" />
+                        <img src="Photo/backtoall@2x.png" alt="backtoall" />
                     </div>
                     <div class="back_to_all_yazirushi">
                         <img
                             src="Photo/backtoallyazirushi@2x.png"
-                            alt="view more"
+                            alt="backtoall"
                         />
                     </div>
                 </a>
@@ -213,14 +219,14 @@
 
                 <div class="footer-right">
                     <div class="finduson">
-                        <img src="Photo/FINDUSON@2x.png" alt="about_photo1" />
+                        <img src="Photo/FINDUSON@2x.png" alt="FINDUSON" />
                     </div>
                     <a
                         href="https://www.instagram.com/mi.ll_design?igsh=MWFrcW43bm9heGhxdw&utm_source=qr"
                     >
                         <img
                             src="Photo/instagram@2x.png"
-                            alt="Instagram"
+                            alt="Instagramアイコン"
                             class="instaicon"
                         />
                     </a>
@@ -243,14 +249,14 @@
 
                 <div class="footer-right_nav-sp">
                     <div class="finduson">
-                        <img src="Photo/FINDUSON@2x.png" alt="about_photo1" />
+                        <img src="Photo/FINDUSON@2x.png" alt="FINDUSON" />
                     </div>
                     <a
                         href="https://www.instagram.com/mi.ll_design?igsh=MWFrcW43bm9heGhxdw&utm_source=qr"
                     >
                         <img
                             src="Photo/instagram@2x.png"
-                            alt="Instagram"
+                            alt="Instagramアイコン"
                             class="instaicon"
                         />
                     </a>
@@ -339,9 +345,17 @@
         </script>
 
         <script>
-            $(window).on("load", function () {
-                const referenceHeight = $(".meishi_slide").outerHeight();
-                $(".logo_meaning_sp").height(referenceHeight);
+            $(window).on("load resize", function () {
+                let maxHeight = 0;
+
+                $(".meishi_slide").each(function () {
+                    const slideHeight = $(this).outerHeight();
+                    if (slideHeight > maxHeight) {
+                        maxHeight = slideHeight;
+                    }
+                });
+
+                $(".meishi_slide").height(maxHeight);
             });
         </script>
 
